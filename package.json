@@ -1,0 +1,22 @@
+{
+  "name": "daniil-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^5.1.0",
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.12.1",
+    "tailwindcss": "^4.1.11",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  }
+}
