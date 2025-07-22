@@ -18,34 +18,7 @@
             @click="downloadFile(expertise.url)"
           >
             {{ expertise.name }}
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 12l4 4 4-4"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12 4v12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M5 20h14"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-            </svg>
+            <DownloadIcon />
           </Chip>
         </div>
       </template>
@@ -61,18 +34,11 @@
 </template>
 
 <script lang="ts" setup>
-import Tabs from './Tabs.vue';
-import Chip from './Chip.vue';
-import Title from './Title.vue';
-
-function downloadFile(url: string) {
-  const link = document.createElement('a');
-  link.href = url;
-  link.setAttribute('download', url.split('/').pop() || 'file');
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
+import Tabs from '../shared/ui/kit/Tabs.vue';
+import Chip from '../shared/ui/kit/Chip.vue';
+import Title from '../shared/ui/kit/Title.vue';
+import { downloadFile } from '../shared/lib/utils/download-file';
+import DownloadIcon from '../shared/ui/icons/Download.vue';
 
 const tabItems = [
   { label: 'Software', value: 'software' },

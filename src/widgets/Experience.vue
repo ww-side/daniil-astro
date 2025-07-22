@@ -24,12 +24,7 @@
         <List :values="item.experience" />
         <div class="flex flex-wrap gap-1">
           <Text size="sm" weight="500">Skills:</Text>
-          <div v-for="skill in item.skills" :key="skill">
-            <Text size="sm">{{
-              skill +
-              (skill === item.skills[item.skills.length - 1] ? '' : ', ')
-            }}</Text>
-          </div>
+          <Text size="sm">{{ item.skills.join(', ') }}</Text>
         </div>
       </div>
     </section>
@@ -37,9 +32,9 @@
 </template>
 
 <script lang="ts" setup>
-import Title from './Title.vue';
-import Text from './Text.vue';
-import List from './List.vue';
+import Title from '../shared/ui/kit/Title.vue';
+import Text from '../shared/ui/kit/Text.vue';
+import List from '../shared/ui/kit/List.vue';
 
 const experience = [
   {
