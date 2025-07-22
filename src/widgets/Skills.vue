@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col gap-3">
+  <section class="mt-6 flex flex-col gap-3">
     <Title as="h2">Skills</Title>
     <Tabs :tabs="tabItems">
       <template #software>
@@ -71,7 +71,7 @@ const software = [
   { name: 'RxJS' },
   { name: 'NodeJS' },
   { name: 'Express' },
-  { name: 'Nest' },
+  { name: 'NestJS' },
   { name: 'GraphQL' },
   { name: 'PostgreSQL' },
   { name: 'MongoDB' },
