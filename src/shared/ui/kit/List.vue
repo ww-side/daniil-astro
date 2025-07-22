@@ -1,10 +1,6 @@
 <template>
   <ul class="list-inside list-disc">
-    <li
-      v-for="item in props.values"
-      :key="item"
-      class="text-base text-[#32302c]"
-    >
+    <li v-for="item in props.values" :key="item" class="text-sm text-[#32302c]">
       {{ item }}
     </li>
   </ul>

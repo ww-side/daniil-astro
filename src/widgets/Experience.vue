@@ -20,11 +20,16 @@
             <Text size="sm">{{ item.period }}</Text>
           </div>
         </div>
-        <Text>{{ item.summary }}</Text>
+        <div class="flex items-stretch gap-3">
+          <span class="w-1 bg-[#f2f2f3]"></span>
+          <Text size="sm">{{ item.summary }}</Text>
+        </div>
         <List :values="item.experience" />
         <div class="flex flex-wrap gap-1">
-          <Text size="sm" weight="500">Skills:</Text>
-          <Text size="sm">{{ item.skills.join(', ') }}</Text>
+          <Text size="sm"
+            ><span class="font-semibold">Skills:</span>
+            {{ item.skills.join(', ') }}</Text
+          >
         </div>
       </div>
     </section>
